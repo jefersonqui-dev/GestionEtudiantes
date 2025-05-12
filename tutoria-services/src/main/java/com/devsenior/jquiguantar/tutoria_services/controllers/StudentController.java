@@ -25,6 +25,10 @@ public class StudentController {
     public List<StudentDto> getAllStudents() {
         return service.getAll();
     }
+    @GetMapping("/{id}")
+    public StudentDto getMethodName(@PathVariable(name = "id") Long code){
+        return service.getById(code);
+    }
 
     @PostMapping
     public StudentDto newStudent(@RequestBody StudentDto student) {

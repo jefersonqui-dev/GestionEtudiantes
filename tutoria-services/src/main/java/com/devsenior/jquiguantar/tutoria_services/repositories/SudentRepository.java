@@ -22,6 +22,12 @@ public class SudentRepository {
         students.add(student);
         return student;
     }
+    public StudentDto findByCode(Long code){
+        return students.stream()
+            .filter(s -> s.getCode().longValue() == code)
+            .findFirst()
+            .get();
+    }
     public StudentDto delete(Long code){
         var student = students.stream()
             .filter(s -> s.getCode().longValue() == code)
