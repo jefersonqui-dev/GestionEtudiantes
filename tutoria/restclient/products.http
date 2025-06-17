@@ -1,0 +1,39 @@
+ ### get all products
+ GET http://localhost:8081/products
+
+###  get product by position
+ GET http://localhost:8081/products/1
+
+###
+POST http://localhost:8081/products
+Authorization: Basic dXNlcjo5ZjZmMWViOS1mOGRjLTQzYTEtYjg1OC00ZjkzZWFkODIzNjg=
+Content-Type: application/json
+
+{
+    "name": "Camiseta",
+    "description": "Camiseta de algodón",
+    "price": 19.99,
+    "image": "https://via.placeholder.com/150",
+    "category": "Ropa",
+    "brand": "Nike",
+    "color": "Blanco",
+    "size": "M"
+}
+
+### delete user
+DELETE http://localhost:8081/products/0
+
+###Update user
+PUT http://localhost:8081/products/0
+Content-Type: application/json
+
+{
+    "name": "Camiseta",
+    "description": "Camiseta de algodón",
+    "price": 19.99,
+    "image": "https://via.placeholder.com/150",
+    "category": "Ropa",
+    "brand": "Nike",
+    "color": "Blanco",
+    "size": "M"
+}

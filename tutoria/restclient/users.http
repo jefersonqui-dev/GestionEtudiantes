@@ -1,0 +1,34 @@
+
+ ### get all users
+ GET http://localhost:8081/users
+ Authorization: Basic dXNlcjo5ZjZmMWViOS1mOGRjLTQzYTEtYjg1OC00ZjkzZWFkODIzNjg=
+
+###  get user by position
+ GET http://localhost:8081/users/1
+ Authorization: Basic dXNlcjo5ZjZmMWViOS1mOGRjLTQzYTEtYjg1OC00ZjkzZWFkODIzNjg=
+
+###
+POST http://localhost:8081/users
+Authorization: Basic dXNlcjo5ZjZmMWViOS1mOGRjLTQzYTEtYjg1OC00ZjkzZWFkODIzNjg=
+Content-Type: application/json
+
+{
+    "name": "Jeferson Quiguantar",
+    "email": "jefferson@gmail.com",
+    "password": "admin123",
+    "active": false
+}
+
+### delete user
+DELETE http://localhost:8081/users/0
+
+###Update user
+PUT http://localhost:8081/users/0
+Content-Type: application/json
+
+{
+    "name": "Jeferson Quiguantar",
+    "email": "jquiguantar@gmail.com",
+    "password": "admin123",
+    "active": true
+}
